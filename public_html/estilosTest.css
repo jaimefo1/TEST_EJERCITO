@@ -1,0 +1,82 @@
+div,
+select {
+    margin: 10px;
+}
+
+
+#condiciones {
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    width: 490px;
+    padding: 10px;
+
+}
+
+
+#soluciones {
+    position: absolute;
+    top: 100px;
+    left: 550px;
+    border: 1px solid #000;
+    width: 100px;
+}
+
+#respuesta {
+    position: absolute;
+    top: 600px;
+    left: 10px;
+    border: 2px solid #1807fd;
+    width: 500px;
+}
+
+#resultado {
+    position: absolute;
+    top: 700px;
+    left: 10px;
+    border: 2px solid #fd5507;
+    width: 500px
+}
+
+/* Etiquetas para entradas sin marcar */
+input[type="checkbox"]+label {
+    color: gray;
+    font-style: normal;
+}
+
+/* Etiquetas para entradas marcadas */
+input:checked+label {
+    color: black;
+    font-style: normal;
+}
+
+#tablaSoluciones {
+    width: 100%;
+    display: block;
+}
+
+#tablaSoluciones>thead {
+    display: inline-block;
+    width: 100%;
+    height: 20px;
+}
+
+#tablaSoluciones>tbody {
+    height: 200px;
+    display: inline-block;
+    width: 100%;
+    overflow: auto;
+}
+
+/* Elemento Checkbox, cuando está marcado 
+input[type="checkbox"]:checked {
+    color: red;
+    box-shadow: 0 0 0 2px hotpink;
+
+}*/
+
+/* Elementos Option, cuando se seleccionan 
+option:checked {
+  box-shadow: 0 0 0 3px lime;
+  color: red;
+}*/

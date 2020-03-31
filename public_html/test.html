@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>TEST EJÉRCITO</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="estilosTest.css" />
+</head>
+
+<body>
+    <script src='funciones.js'></script>
+    <script src="inicializa.js"></script>
+    <script src="validaTest.js"> </script>
+
+    <h1>TEST DEL EJERCITO ESPAÑOL</h1>
+    <div id='condiciones' title="lista de condiciones">
+        <h3>CONDICIONES A CUMPLIR</h3>
+        <script>generaListaCondiciones()</script>
+        <button onclick="marcarTodasLasCondiciones(true)" title="">MARCAR TODAS</button>
+        <button onclick="marcarTodasLasCondiciones(false)" title="">DESMARCAR TODAS</button>
+    </div>
+    <div id="soluciones">
+        <input type="checkbox" id="mostrarSoluciones" title="ver soluciones" onclick="muestraSoluciones()">
+        <label for="mostrarSoluciones">soluciones</label>
+        <table id="tablaSoluciones"></table>
+    </div>
+
+    <div id='respuesta' title="respuesta del test">
+        <table>
+            <tr>
+                <th colspan="10" style="text-align: center;">RESPUESTAS DEL CUESTIONARIO</th>
+            </tr>
+            <tr>
+                <script>generaBotonesRespuesta()</script>
+                <td rowspan="3" colspan="2"> <button onclick="resultado()" title="COMPROBAR">
+                        <img width="70" height="50" src="../comprobar.png">
+                    </button></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button onclick="todoIgual('cruz')" title="TODOS CRUCES">
+                        <img width="60" height="25" src="../cruz.png">
+                    </button>
+                </td>
+                <td colspan="2">
+                    <button onclick="todoIgual('circulo')" title="TODOS CIRCULOS">
+                        <img width="60" height="25" src="../circulo.png">
+                    </button>
+                </td>
+                <td colspan="2">
+                    <button onclick="alternar()" title="ALTERNAR">
+                        <img width="60" height="25" src="../alternar.png">
+                    </button>
+                </td>
+                <td colspan="2">
+                    <button onclick="respuestaAlAzar()" title="VOY A TENER SUERTE">
+                        <img width="60" height="25" src="../alAzar.png">
+                    </button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id='resultado' title="resultado" hidden >
+        <table id="tablaResultado">
+            <tr>
+                <td id="celdaCorrectoIncorrecto" style="width: 200;"><img src="../correcto.png" height="25" width="30">
+                    <label>CORRECTO</label> </td>
+            </tr>
+            <td><label id="celdaListaFallos"></label></td>
+            </tr>
+            <tr>
+                <td>
+                    <button onclick="nuevaRespuesta()" title="NUEVA RESPUESTA">NUEVA RESPUESTA</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
